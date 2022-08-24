@@ -26,14 +26,12 @@
 
 - # Commit
 
-      - [x] Commit :<br>
+  - [x] Commit : point in time으로 기록(저장)하는 시점이다. 즉 변경사항들을 기록(저장) 한것.<br>
 
-  point in time으로 기록(저장)하는 시점이다. 즉 변경사항들을 기록(저장) 한것.<br>
-
-      - 사용방법 :
-        1. 코드 작성 및 코드 수정
-        2. Git add .  또는 git add 원하는 파일
-        3. Git commit -m ‘커밋메세지’.    이때 -m은 메세지란 의미
+    - 사용방법 :
+      1. 코드 작성 및 코드 수정
+      2. Git add . 또는 git add 원하는 파일
+      3. Git commit -m ‘커밋메세지’. 이때 -m은 메세지란 의미
 
 - # Area
 
@@ -165,11 +163,12 @@
 - 방금 만든 커밋(바로 이전커밋)에 코드를 수정할수 있다.
 
 - 사용방법<br>
-  1. 코드수정
-  2. Git add .
-  3. Git commit --ammend
-  4. vi파일로 넘어가는데 메세지를 수정하거나 또는 바로 나간다. Esc -> :wq
-  5. 만약 esc가 안될경우 Ctrl+3 또는 Ctrl+[ 하면됨.
+
+      1. 코드수정
+      2. Git add .
+      3. Git commit --ammend
+      4. vi파일로 넘어가는데 메세지를 수정하거나 또는 바로 나간다. Esc -> :wq
+      5. 만약 esc가 안될경우 Ctrl+3 또는 Ctrl+[ 하면됨.
 
 <br>
 
@@ -179,10 +178,11 @@
 
 - 사용방법<br>
 
-  1. 저장하기 : Git stash
-  2. 저장된값 불러오기 : git stash apply stash@{index값}. Ex) git stash apply stash@{0}
-  3. 저장된값 보기 : git stash list
-  4. 저장된값 삭제하기 : git stash drop stash@{index값}. Ex) git stash drop stash@{0}
+      1. 저장하기 : Git stash
+      2. 저장된값 불러오기 : git stash apply stash@{index값}. Ex) git stash apply stash@{0}
+      3. 저장된값 보기 : git stash list
+      4. 저장된값 삭제하기 : git stash drop stash@{index값}. Ex) git stash drop stash@{0}
+
      <br>
 
 - # Reset
@@ -192,15 +192,15 @@
 
 - 사용방법<br>
 
-  1. 삭제할 commit의 id를 알아낸다. Git log or git log --oneline
-  2. 종류를 선택 Hard, mixed
-  3. 사용해준다.
-  4. hard : 완전삭제
-     1. 현재~ 원하는 부분(id)까지 Git reset --hard id Ex) git reset --hard d89289
-     2. 제일 최근 커밋삭제 Git reset --hard HEAD^
-  5. mixed : 삭제는 하지만, 작성한 코드는 stage에 남겨둠
-     1. 현재~ 원하는 부분(id)까지 Git reset --mixed id Ex) git reset --mixed d89289
-     2. 제일 최근 커밋삭제 Git reset --mixed HEAD^
+      1. 삭제할 commit의 id를 알아낸다. Git log or git log --oneline
+      2. 종류를 선택 Hard, mixed
+      3. 사용해준다.
+      4. hard : 완전삭제
+         1. 현재~ 원하는 부분(id)까지 Git reset --hard id Ex) git reset --hard d89289
+         2. 제일 최근 커밋삭제 Git reset --hard HEAD^
+      5. mixed : 삭제는 하지만, 작성한 코드는 stage에 남겨둠
+         1. 현재~ 원하는 부분(id)까지 Git reset --mixed id Ex) git reset --mixed d89289
+         2. 제일 최근 커밋삭제 Git reset --mixed HEAD^
 
 <br>
 
@@ -211,9 +211,9 @@
 
 - 사용방법<br>
 
-  1. Git revert --hard id
-  2. Git revert --mixed id
-  3. 바로 커밋되지 않도록 하기 : git revert --no-commit
+      1. Git revert --hard id
+      2. Git revert --mixed id
+      3. 바로 커밋되지 않도록 하기 : git revert --no-commit
 
 <br>
 
@@ -248,8 +248,9 @@
 - 상대방이 PR남겼지만 merge를 하지 않아 코드를 볼수 없을경우 checkout을 통해 볼수있다.
 - 사용방법
 
-1. 원격저장소에 상대방의 코드를 업데이트(fetch) 해준다. Git fetch origin --prune
-   이때 --prune은 더이상 원격 저장소에 존재하지 않는 ref를 삭제한다는 의미
-2. Git checkout 보고싶은 브랜치 git checkout develop
-3. Git pull을 통해 상대방의 코드를 볼 수 있다.
+      1. 원격저장소에 상대방의 코드를 업데이트(fetch) 해준다. Git fetch origin --prune
+         이때 --prune은 더이상 원격 저장소에 존재하지 않는 ref를 삭제한다는 의미
+      2. Git checkout 보고싶은 브랜치 git checkout develop
+      3. Git pull을 통해 상대방의 코드를 볼 수 있다.
+
    <br>
