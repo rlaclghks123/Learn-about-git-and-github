@@ -1,6 +1,33 @@
-## git,github 지식 정리
+# git,github 지식 정리
 
-- # Git
+
+## Contents
+
+- [Contents](#contents)
+  - [Git](#git)
+  - [GitHub](#github)
+  - [Commit](#commit)
+  - [Area](#area)
+  - [로컬저장소](#로컬저장소)
+  - [첫번째 버전 만들기](#첫번째-버전-만들기)
+  - [커밋 이모저모](#커밋-이모저모)
+  - [Git Clone](#git-clone)
+  - [Fork](#fork)
+  - [Branch](#branch)
+  - [GitFlow](#gitflow)
+  - [Issue](#issue)
+  - [Pull Request](#pull-request)
+  - [Ammend](#ammend)
+  - [Stash](#stash)
+  - [Reset](#reset)
+  - [Revert](#revert)
+  - [Cherry-pick](#cherry-pick)
+  - [Git log](#git-log)
+  - [Git status](#git-status)
+  - [Checkout](#checkout)
+  
+  
+## Git
 
   - [x] git이란 version control System으로서 변경된 모든 사항들을 찾는(tracking) 시스템이다.
         즉 모든 변경된 사항들을 주시하고 있는것으며 원하는 시점마다 버전을 만들고, 이들간에 자유롭게 돌아다닐수 있다. 내가 만든 버전 뿐만 아니라 동료가 만든 버전으로 이동할수 있고,
@@ -10,7 +37,7 @@
         Cli : comand line interface : 터미널에 명령어를 직접 쳐서 git을 다룬다. (터미널 사용)
         Gui : graphic user interface : 버튼을 클릭해서 git을 다루는 방법 (GitHub desktop, 소스트리)
 
-- # GitHub
+## GitHub
 
   - [x] Git provider으로써 git 파일들 또는 git 변경 사항들을 업로드 하는 장소다.
         즉 파일을 업로드 하는 공간 Github 뿐만아니라 gitlab, bitbucket등도 있지만 Github가 가장 유명하다.
@@ -24,7 +51,7 @@
     5. Git commit -m ‘first commit’ <br>
     6. 로컬 저장소와 github의 저장소를 연결시킨다. Git add origin remote url. 이때 url은 github의 저장소 url이다.
 
-- # Commit
+## Commit
 
   - [x] Commit : point in time으로 기록(저장)하는 시점이다. 즉 변경사항들을 기록(저장) 한것.<br>
 
@@ -33,7 +60,7 @@
       2. Git add . 또는 git add 원하는 파일
       3. Git commit -m ‘커밋메세지’. 이때 -m은 메세지란 의미
 
-- # Area
+## Area
 
   - [x] Area :<br>
         <br>
@@ -44,7 +71,7 @@
 
     <br>
 
-- # 로컬저장소
+## 로컬저장소
 
   - [x] 로컬저장소 :<br>
         <br>
@@ -56,7 +83,7 @@
 
     <br>
 
-- # 첫번째 버전 만들기
+## 첫번째 버전 만들기
 
   1.  Git init을 통해 로컬저장소를 만든다. Ex) git init 입력
   2.  코드를 작성 한뒤, git add를 통해 변경된 파일중 올릴 파일들을 선택한다. ex) git add .
@@ -67,7 +94,7 @@
 
     <br>
 
-- # 커밋 이모저모
+## 커밋 이모저모
 
   1.  커밋은 ‘의미 있는 변동사항’을 묶어서 만든다.
   2.  버튼클릭 버그를 고치는데 5개의 파일을 수정했다면 그 5가지를 묶어 커밋한다.
@@ -76,7 +103,7 @@
 
     <br>
 
-- # 다른사람이 만든 저장소 받아오기1 : git clone
+## Git Clone
 
   1.  원하는 폴더명으로 폴더를 만든다.
   2.  터미널을 통해 현재 위치를 새로만든 폴더로 이동해준다. cd 새로운폴더
@@ -86,7 +113,7 @@
 
     <br>
 
-- # 다른사람이 만든 저장소 받아오기2 : Fork
+## Fork
 
   오픈소스 등 다수의 불특정 다수들은 fork사용 why? => 원본과 다른 저장소를 사용한다.
 
@@ -105,7 +132,7 @@
 
     <br>
 
-- # branch
+## Branch
 
   - master(본체)가 있으면 나뭇가지 처럼 뻣어나가서 여러가지 시도를 한 뒤, 괜찮으면 master로 합치고, 괜찮지 않을 경우 없앰으로서 master(본체)에 영향이 가지 않도록 하는 것. 원본에 피해 가지 않고, 여러가지 실험을 할 수 있는 시스템이다.
 
@@ -119,7 +146,7 @@
 
     <br>
 
-- # gitFlow
+## GitFlow
 
   - Git-flow는 Git이 새롭게 활성화되기 시작하는 Vincent Driessen이라는 사람의 블로그 글에 의해 널리 퍼지기 시작했고 현재는 Git으로 개발할 때 거의 표준과 같이 사용되는 방법론입니다.
 
@@ -135,7 +162,7 @@
 
 <br>
 
-- # Issue
+## Issue
 
   - Github, gitlab과 같은곳에서 프로젝트가 해야하는데 아직 하지 않은일 or 사람들이 발견한 문제나 버그를 기록하는것.
 
@@ -149,7 +176,7 @@
 
 <br>
 
-- # Pull Request : PR
+## Pull Request
 
 - 원본 저장소 or develop브랜치 등 merge를 요구하는것.
 - 최대한 혼자 merge하는것을 피하고 모든 머지는 PR을 통해서 한다.
@@ -158,7 +185,7 @@
 
 <br>
 
-- # Ammend
+## Ammend
 
 - 방금 만든 커밋(바로 이전커밋)에 코드를 수정할수 있다.
 
@@ -172,7 +199,7 @@
 
 <br>
 
-- # stash
+## Stash
 
 - 변경 사항을 commit 하기전에 잠시 보관할수 있도록 하는 기능. 주로 코드 작성중 checkout을 할 경우 commit 하고싶지 않을때 사용
 
@@ -185,7 +212,7 @@
 
      <br>
 
-- # Reset
+## Reset
 
 - 작성한 커밋을 삭제하는 것이다.  
   <span style="color:red">반드시 혼자쓰는 브랜치에서만 사용해야한다. 같이 사용할 경우 꼬일 위험이 있기때문에 </span>
@@ -204,7 +231,7 @@
 
 <br>
 
-- # Revert
+## Revert
 
 - 커밋의 히스토리를 남기면서 삭제 하는것 . 같이 사용하는 브랜치에서도 사용 가능.  
   **만약 같이사용하는 브랜치면 무조건 reset 말고 revert 사용**
@@ -217,7 +244,7 @@
 
 <br>
 
-- # Cherry-pick
+## Cherry-pick
 
 - 수정사항이 너무 많아서 당장 PR할수 없을때 원하는 커밋 하나만 급하게 merge 시킬때 사용한다.
 - 사용방법<br>
@@ -226,7 +253,7 @@
 
 <br>
 
-- # Git log
+## Git log
 
 - 어떻게 커밋이 되었는지, 커밋 이력을 볼 수 있다. Ex) git log
 - 간단히 보는방법 Ex) git log - -oneline
@@ -235,7 +262,7 @@
 - Git log를 나갈려면 q를 입력하면 된다.  
   <br>
 
-- # Git status
+## Git status
 
 - commit을 했는지 안했는지 status(상태)를 알아본다.
 - commit을 하지 않은 상태에서 git status를 하면 modified : ~~ 부분이 빨간색이다.
@@ -243,14 +270,23 @@
 
 <br>
 
-- # 상대방이 PR남겼을때 상대방 코드 보는법
 
-- 상대방이 PR남겼지만 merge를 하지 않아 코드를 볼수 없을경우 checkout을 통해 볼수있다.
+## Checkout
+
+- 상대방이 PR남겼지만 merge를 하지 않아 코드를 볼수 없을 경우 checkout을 통해 볼 수 있으며, 이전 커밋을 남긴 경우, 커밋 ID를 통해 checkout으로 이전 코드를 볼 수 있다.
+
 - 사용방법
 
-      1. 원격저장소에 상대방의 코드를 업데이트(fetch) 해준다. Git fetch origin --prune
-         이때 --prune은 더이상 원격 저장소에 존재하지 않는 ref를 삭제한다는 의미
-      2. Git checkout 보고싶은 브랜치 git checkout develop
-      3. Git pull을 통해 상대방의 코드를 볼 수 있다.
+      - 상대방 PR남겼을때 코드 보는법 
+      
+          1. 원격저장소에 상대방의 코드를 업데이트(fetch) 해준다. Git fetch origin --prune
+             이때 --prune은 더이상 원격 저장소에 존재하지 않는 ref를 삭제한다는 의미
+          2. Git checkout 보고싶은 브랜치 git checkout develop
+          3. Git pull을 통해 상대방의 코드를 볼 수 있다.
 
+      - 이전 코드 보는법
+      
+          1. git log를 통해 돌아가길 원하는 시점의 commit id를 확인한다.
+          2. git checkout commit id를 통해 그 시점으로 돌아간다. Ex) git checkout 471f06c
+          3. git checkout master 를 통해 원래 브랜치로 돌아온다.
    <br>
